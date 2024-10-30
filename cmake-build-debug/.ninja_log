@@ -1,0 +1,15 @@
+# ninja log v6
+20	1079	1729876268186857690	CMakeFiles/meanreversiontradingstrategy.dir/main.cpp.o	def3c6b1f0ca5a3
+21	1778	1729876268187235063	CMakeFiles/meanreversiontradingstrategy.dir/dataCalculations.cpp.o	9b6a29ed10b5cb7e
+1778	1889	1729876269944770635	meanreversiontradingstrategy	71cbd35063921659
+7	926	1729880924945601622	CMakeFiles/meanreversiontradingstrategy.dir/tradeSession.cpp.o	403d1dc8f7a090e0
+6	998	1729880924944292952	CMakeFiles/meanreversiontradingstrategy.dir/main.cpp.o	def3c6b1f0ca5a3
+7	1726	1729880924945433455	CMakeFiles/meanreversiontradingstrategy.dir/dataCalculations.cpp.o	9b6a29ed10b5cb7e
+6	752	1729880974354169858	CMakeFiles/meanreversiontradingstrategy.dir/tradeSession.cpp.o	403d1dc8f7a090e0
+6	857	1729881027375876017	CMakeFiles/meanreversiontradingstrategy.dir/main.cpp.o	def3c6b1f0ca5a3
+7	1522	1729881027376211935	CMakeFiles/meanreversiontradingstrategy.dir/dataCalculations.cpp.o	9b6a29ed10b5cb7e
+6	783	1729881157641720041	CMakeFiles/meanreversiontradingstrategy.dir/tradeSession.cpp.o	403d1dc8f7a090e0
+5	868	1729881157641305874	CMakeFiles/meanreversiontradingstrategy.dir/main.cpp.o	def3c6b1f0ca5a3
+6	1526	1729881157641607499	CMakeFiles/meanreversiontradingstrategy.dir/dataCalculations.cpp.o	9b6a29ed10b5cb7e
+4	1366	1729881193091447364	CMakeFiles/meanreversiontradingstrategy.dir/dataCalculations.cpp.o	9b6a29ed10b5cb7e
+1366	1393	1729881194452839354	meanreversiontradingstrategy	8574cc44f092777c

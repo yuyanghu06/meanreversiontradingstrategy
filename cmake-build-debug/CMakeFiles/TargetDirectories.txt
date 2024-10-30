@@ -1,0 +1,3 @@
+/Users/yuyang/Documents/CLion Projects/meanreversiontradingstrategy/cmake-build-debug/CMakeFiles/meanreversiontradingstrategy.dir
+/Users/yuyang/Documents/CLion Projects/meanreversiontradingstrategy/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yuyang/Documents/CLion Projects/meanreversiontradingstrategy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
