@@ -9,14 +9,14 @@ int main()
 {
     const std::string directoryPath = "/Users/yuyang/Library/Application Support/net.metaquotes.wine.metatrader5/drive_c/Program Files/MetaTrader 5/MQL5/Files";
     std::vector<tradeSession::session> prev;
+    std::optional<tradeSession::session> session;
     while(true) {
-        std::optional<tradeSession::session> session;
         for(const auto& entry : fs::directory_iterator(directoryPath)) {
             std::string file = entry.path().string();
             if (entry.path().filename() == ".DS_Store") {
                 continue; // Skip this file
             }
-            dataCalculations::trade temp(file, 0.2);
+            dataCalculations::trade temp(file, 0.4);
             if(!session.has_value()) {
                 session.emplace(temp);
             }else {

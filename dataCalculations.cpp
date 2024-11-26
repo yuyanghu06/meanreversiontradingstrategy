@@ -17,7 +17,7 @@ namespace dataCalculations {
         currprice = data[data.size() - 1];
         sma = getSMA();
         deviation = getDeviation();
-        regressionprice = getRegressionPrice(); //to be completed
+        regressionprice = getRegressionPrice();
     }
     /**
      * Computes and returns the average of the average of the data

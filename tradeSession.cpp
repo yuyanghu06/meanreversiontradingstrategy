@@ -48,6 +48,8 @@ namespace tradeSession {
                 tradetype = "short";
                 return std::string("short");
             }
+            tradetype = "hold";
+            return std::string("hold");
         }
         if(tradetype == "long"){
             if(currprice <= regressionprice - tolerance) {
@@ -57,7 +59,7 @@ namespace tradeSession {
             }
         }
         if(tradetype == "short") {
-            if(currprice >= regressionprice - tolerance) {
+            if(currprice >= regressionprice + tolerance) {
                 activeTrade = false;
                 tradetype = "";
                 return std::string("cover");
@@ -72,14 +74,13 @@ namespace tradeSession {
      * @param curr
      */
     void session::update(dataCalculations::trade curr) {
+        std::string decision = getDecision(curr);
         if(!activeTrade) {
-            getDecision(curr);
-            if(tradetype == "hold") {
+            if(decision == "hold") {
                 return;
             }
             buy = curr;
         }else {
-            std::string decision = getDecision(curr);
             if(decision == "sell") {
                 sell = curr;
                 earnings = getNetEarningsLong(buy.currprice, curr.currprice);
