@@ -11,4 +11,5 @@ add_executable(meanreversiontradingstrategy main.cpp
 )
 
 include_directories("/Users/yuyang/Documents/CLion Projects/libs/eigen-3.4.0")
+include_directories("/Users/yuyang/Documents/CLion Projects/libs/boost_1_86_0")
 

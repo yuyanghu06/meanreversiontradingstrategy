@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/yuyang/Documents/CLion Projects/libs/eigen-3.4.0"
+CXX_INCLUDES = -I"/Users/yuyang/Documents/CLion Projects/libs/eigen-3.4.0" -I"/Users/yuyang/Documents/CLion Projects/libs/boost_1_86_0"
 
 CXX_FLAGSarm64 = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -fcolor-diagnostics
 

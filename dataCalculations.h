@@ -25,6 +25,7 @@ namespace dataCalculations {
         std::vector<double> read_file(std::string filename, double column);
         void update(std::string filename);
 
+
         // Variable Declarations
         std::vector<double> data;
         std::string filename;

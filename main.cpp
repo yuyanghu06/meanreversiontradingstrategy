@@ -3,8 +3,27 @@
 #include <chrono>
 #include <thread>
 #include <iostream>
+#include <boost/date_time/local_time/local_date_time.hpp>
 
 namespace fs = std::filesystem;
+/**
+ * Outputs the contents of the given session object into a .txt file
+ * @param optional<tradeSession::session> session
+ */
+static void toFile(std::optional<tradeSession::session> session) {
+    using namespace boost::posix_time;
+    using namespace boost::local_time;
+    using namespace std;
+    ptime time = second_clock::local_time();
+    string path = "/Users/yuyang/Documents/meanreversion trades";
+    string file = to_iso_string(time) + ".txt";
+    ofstream out(path + "/" + file);
+    out << "Session Concluded. Bought at: " << session.value().buy.currprice << endl;
+    out << "                   Sold at: " << session.value().sell->currprice << endl;
+    out << "                   Earnings: " << session.value().earnings << endl;
+    out.close();
+}
+
 int main()
 {
     const std::string directoryPath = "/Users/yuyang/Library/Application Support/net.metaquotes.wine.metatrader5/drive_c/Program Files/MetaTrader 5/MQL5/Files";
@@ -24,7 +43,8 @@ int main()
             }
             std::cout << session.value().tradetype << std::endl;
             if(session.value().sell.has_value()) {
-                std::cout << "Trading session has concluded, total earnings: " << session.value().earnings << std::endl;
+                std::cout << "Trading Session Complete. Total Earnings: " << session.value().earnings << std::endl;
+                toFile(session);
                 prev.push_back(session.value());
                 session.reset();
             }
@@ -32,10 +52,4 @@ int main()
             std::this_thread::sleep_for(std::chrono::minutes(1));
         }
     }
-
-    std::string filename = "/Users/yuyang/Documents/CLion Projects/meanreversiontradingstrategy/10102024225213.csv";
-    dataCalculations::trade t(filename, 0.2);
-    std::cout << t.deviation << std::endl;
-    std::cout << t.regressionprice << std::endl;
-    std::cout << t.decision << std::endl;
 }
